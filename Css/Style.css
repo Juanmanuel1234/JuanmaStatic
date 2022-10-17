@@ -1,0 +1,28 @@
+html{
+    font-size: 62.5%;
+}
+
+/* Header */
+.nav{
+    font-size: 1.4rem;
+}
+
+.logo{
+    height: 30px;
+    width: 60px;
+}
+
+.nav__item{
+
+}
+
+@media screen and (min-width: 768px){
+    .nav__list{
+        width: auto;
+        display: flex;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+}
