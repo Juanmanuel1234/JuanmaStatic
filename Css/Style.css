@@ -2,26 +2,52 @@
     --color-first: rgb(44, 25, 212);
     --color-alternative: rgb(138, 78, 10);
     --color-header:rgb(6, 68, 93);
-    --color-word: #f3f3f3;
+    --color-text: #f3f3f3;
+    --color-backround: #000;
 }
 
+/* Typography */
+html{
+    font-size: 62.5%;    
+}
 
 body{
-    font-size: 62.5%;
+    font-family: ubuntu, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: var(--color-text);    
 }
 
-html{
-    font-size: 1.3rem;
-    color: #222;
-    font-family: ubuntu, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 a{
     text-decoration: none;
+    color: var(--color-text);
 }
+
 /* Header */
+.list{
+    list-style: none;
+}
+
 .nav{
-    font-size: 1.4rem;
+    background: var(--color-backround);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+    align-items: center;
+
+}
+.nav__list{
+    width: 100%;
+    margin-top: 2rem;
+    padding-left: 0;
+    margin-bottom: 0;
+
+}
+.nav__item{
+    padding: 0.5 2rem;
+    border-bottom: 1px solid #666;
 }
 
 .logo{
@@ -29,21 +55,31 @@ a{
     width: 60px;
 }
 
-.nav__item{
 
-}
 
 @media screen and (min-width: 768px){
     .nav__list{
-        width: auto;
         display: flex;
+        margin: 0;
+        width: auto;
+        opacity: 1;
+        font-size: 1.3rem;
+    }
+    
+    .nav__item{
+        margin-right:3rem;
+        border: 0;
     }
     .nav{
-        display: flex;
-        justify-content: space-between;
+        border-bottom: 1px solid #666;
     }
 }
 
+.box{
+    background: var(--color-backround);
+    height: 60px;
+    width: 100vw;
+}
 /* Buttons */
 
 .btn{
@@ -61,7 +97,7 @@ a{
 
 .btn--main{
     background: var(--color-first);
-    color: var(--color-word);
+    color: var(--color-text);
 }
 
 .btn--outline{
@@ -71,10 +107,20 @@ a{
 
 .btn--callout{
     background: var(--color-alternative);
-    color: var(--color-word);
+    color: var(--color-text);
 }
 
 .btn--stretched{
     padding-left: 6rem;
     padding-right: 6rem;
+}
+
+/* Block */
+
+.bloc{
+    max-width: 1140px;
+}
+
+.block--dark{
+    background: var(--color-backround);
 }
