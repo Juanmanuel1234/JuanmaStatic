@@ -1,19 +1,22 @@
 :root{
     --color-first: rgb(44, 25, 212);
     --color-alternative: rgb(138, 78, 10);
-    --color-header:rgb(239 184 216);
+    --color-header:rgb(176, 103, 171);
     --color-text: #f3f3f3;
     --color-text-dark: #333;
     --color-backround: #000;
-    --boder-radius: 40px;
+    --color-secondary: rgb(190, 131, 179);
+    --border-radius: 40px;
+
 }
 
 
 *, *::after, *::before {
     box-sizing: border-box;
-  }
+}
 
 /* Typography */
+
 html{
     font-size: 62.5%;    
 }
@@ -66,10 +69,17 @@ a{
     color: var(--color-text);
 }
 
-/* Header */
+/* List */
+
 .list{
     list-style: none;
+    color: var(--color-text-dark);
+    font-size: 2rem;
+    padding-left: 0;
 }
+
+/* Header */
+
 
 .nav{
     display: flex;
@@ -119,7 +129,7 @@ a{
 /* Buttons */
 
 .btn{
-    border-radius: var(--boder-radius);
+    border-radius: var(--border-radius);
     border: 0;
     cursor: pointer;
     font-size: 1.8rem;
@@ -156,6 +166,7 @@ a{
 }
 
 /* Block */
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -193,8 +204,10 @@ a{
     .hero{
         padding-top: 0;
     }
+
 }
 /* Header */
+
 header{
     text-align: center;
     margin-bottom: 3rem;
@@ -221,9 +234,21 @@ header{
     display: grid;
 }
 
+.grid__prices{
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 6rem);
+    text-align: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 @media screen and (min-width: 768px){
     .grid--1x2{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .grid__prices{
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -231,21 +256,39 @@ header{
     .grid--1x3{
         grid-template-columns: repeat(3,1fr);
     }
+    .grid__prices{
+       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) ;
+    }
 }
 
 /* Input */
 .input-group{
     border-radius: var(--border-radius);
+    border: 3px solid black;
     display: flex;
 }
 
 .input{
-    border-radius: var(--boder-radius);
+    border-radius: var(--border-radius);
+    border: 0;
     color: var(--color-header);
     font-size: 2rem;
     outline: 0;
     padding: 1.5rem 3.5rem;
 }
+
+
+
+.input-group .input{
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 2rem;
+    width: 0;
+}
+.input-group .btn{
+    margin: 4px;
+}
+
 
 /* Domain */
 
@@ -260,4 +303,19 @@ header{
     margin: 4rem auto;
     max-width: 670px;
 }
+
+/* Badge */
+
+.badge-action:hover{
+    padding: 1rem .9rem;
+    background: var(--color-secondary);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    color: var(--color-first);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 768px){
+    font-size: 11.5rem;
 }
