@@ -1,3 +1,11 @@
-body{
-    background: darkorchid;
+:root{
+    --color-primary: #e057ef;
+    --color-secondary: #ae8eba;
+    --color-accent: #edc3e4;
+    --color-headings:#0e85bd;
+    --color-body: #918ca4;
+    --color-body-darker: #5c5577;
+    --color-border: #ccc;
+    --border-radius: 40px;
 }
+
