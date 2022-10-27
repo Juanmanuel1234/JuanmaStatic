@@ -9,6 +9,10 @@
     --border-radius: 40px;
 }
 
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
 /* Typography */
 
 html{
@@ -167,3 +171,73 @@ a{
     fill: var(--color-primary);
 }
 
+/* Buttons */
+
+
+.btn{
+    align-items: center; /*if we have an anchor button we want to have the text center.*/
+    border-radius: var(--border-radius);
+    border: 0;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.btn--primary{
+    background: var(--color-primary);
+    color: #f3f3f3;
+}
+
+.btn--primary:hover{
+    background: #e87df4;
+}
+
+.btn--secondary{
+    background: var(--color-secondary);
+    color: #f3f3f3;
+}
+
+.btn--secondary:hover{
+    background: #ebc3fa;
+}
+
+.btn--outline{
+    background: #f3f3f3;
+    color: var(--color-headings);
+    border: 2px solid var(--color-headings);
+}
+
+.btn--outline:hover{
+    background: #5c5577;
+}
+.bnt--accent{
+    background: var(--color-accent);
+    color: #f3f3f3;
+}
+
+.bnt--accent:hover{
+    background: #d0aac8;
+}
+
+.btn--stretched{
+    padding: 2rem 10rem;
+}
+
+.btn--small{
+    padding: 1.5rem 2rem;
+}
+
+.btn--block{
+    width: 100%;
+    display: inline-block;
+}
+
+@media screen and (min-width: 1024px){
+    .btn{
+        font-size: 1.5rem;
+    }
+}
