@@ -175,7 +175,6 @@ a{
 
 /* Buttons */
 
-
 .btn{
     align-items: center; /*if we have an anchor button we want to have the text center.*/    
     border-radius: var(--border-radius);
@@ -384,4 +383,23 @@ a{
     .plan__description{
         font-size: 1.7rem;
     }
+}
+
+/* Media */
+
+.media{
+    display: flex;
+}
+
+.media__heading{
+    margin-top: 0%;
+    color: var(--color-headings);
+}
+
+.media__image{
+    margin-top: 1.4rem;
+}
+
+.media__body{
+    margin: 0 2rem;
 }
