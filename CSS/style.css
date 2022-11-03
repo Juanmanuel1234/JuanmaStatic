@@ -29,6 +29,7 @@ body{
 h1,h2,h3{
     color: var(--color-headings);
     margin-bottom: 1rem;
+    line-height: 1.1;
 }
 
 h1{
@@ -575,7 +576,6 @@ a{
 .block{
     --padding-vertical: 6rem;
     padding: var(--padding-vertical) 2rem;
-    border: 3px solid blue;
 }
 
 .block__header{
@@ -666,6 +666,41 @@ a{
     }
     .img__logo{
         margin-top: 1rem;
-    }
+    }   
+}
+
+/* Hero / Banner */
+
+
+
+.hero__header{
+    text-align: center;
+}
+
+.hero__title{
+    font-size: 7rem;
+    color: #f3f3f3;
+    margin-top: 0;
+}
+
+.hero__text{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    color: #f3f3f3db;
+    letter-spacing: 1px;
+}
+.hero__img{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px){
+    .hero__header{
+        text-align: left;
+        align-self: center;
+     }
+     .hero{
+        padding-top: 0;
+     }
     
 }
