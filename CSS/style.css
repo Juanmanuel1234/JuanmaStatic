@@ -19,6 +19,10 @@
     box-sizing: border-box;
 }
 /* Typography */
+::selection{
+    background: var(--color-headings);
+    color: #fff;
+}
 
 html{
     /* 62.5% of 16px = 10px = 1rem*/
@@ -47,6 +51,7 @@ h2{
 
 h3{
     font-size: 3rem;
+    font-weight: 500;
 }
 
 p{
@@ -130,7 +135,7 @@ a{
 /* List */
 
 .list{
-    color: var(--color-headings);
+    
     list-style: none;
     margin-left: 0;
     font-weight: 600;
@@ -144,6 +149,7 @@ a{
 .list--tick{
     list-style-image: url(../Images/tick.svg);
     padding-left: 3rem;
+    color: var(--color-headings);
 }
 
 .list--tick .list__item{
@@ -469,6 +475,7 @@ a{
 
 .media{
     display: flex;
+    margin-bottom: 4rem;
 }
 
 .media__heading{
@@ -830,3 +837,59 @@ a{
         text-align: center;
     }
 }
+
+/* Showcase */
+
+.showcase__header{
+    margin-top: 0;
+}
+
+.showcase-block{
+    margin-top: 6rem;
+}
+
+.showcase__picture{
+    width: 100%;
+}
+
+.showcase{
+    margin: 4rem 2rem;
+}
+
+.showcase:last-of-type{
+    margin-bottom: 5rem;
+}
+.showcase--icon{
+    margin-top: 2rem;
+}
+
+.showcase__title{
+    margin-left: 1rem;
+    color: #f3f3f3;
+    margin-top: 1rem;
+}
+
+
+@media screen and (min-width: 768px){
+    .block-showcase .grid {
+        grid-template-columns: 50% 50%; /*Means 50 percent of the space of the container*/
+    }
+    .showcase__image{
+        justify-self: end;
+    }
+    .showcase__picture{
+        width: auto;
+        max-width: 700px;
+    }
+    .showcase__header{
+        text-align: center;
+    }
+    .showcase:first-of-type{
+        margin-top: 0;
+    }
+    .showcase__title{
+        display: inline;
+    }    
+}
+
+
